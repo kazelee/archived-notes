@@ -44,7 +44,7 @@ MSAA 抗锯齿：项目 - 项目设置 - 渲染 - 抗锯齿 - MSAA 3D（原教�
 
 边缘黑边的效果，需要自行写 Shader 完成，步骤是在 3D 场景下新建 CanvasLayer，并新建子节点 ColorRect， 然后新建 shader，参考：[Color vignette - Godot Shaders](https://godotshaders.com/shader/color-vignetting/)
 
-```gdshader
+```shader
 shader_type canvas_item;
 
 uniform float vignette_intensity = 0.4;
