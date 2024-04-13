@@ -2,9 +2,10 @@
 
 项目基于 Godot 4.2 dev 版本，采用 C# 语言编写；考虑到 Unity 与 Godot 的诸多不同，一些参数会有所改变，很多功能不可能面面俱到，仅供参考。
 
-项目地址：
+项目地址：（待补）
 
 教程视频：[Learn Unity Beginner/Intermediate 2023 (FREE COMPLETE Course - Unity Tutorial) - YouTube](https://www.youtube.com/watch?v=AmGSEH7QcDg)
+<!-- B站搬运链接就不放了，播放会莫名其妙地卡顿，这里还是使用油管源，目录分得更细 -->
 
 作者的网站：[Learn to make a Game with Unity! Beginners and Intermediates - Code Monkey (unitycodemonkey.com)](https://unitycodemonkey.com/kitchenchaoscourse.php)
 
@@ -67,11 +68,13 @@ void fragment(){
 }
 ```
 
-需要对代码进行微调，由于缺乏 shader 知识，且考虑到对实际效果的影响不大，所以略过这部分。
+<!-- 需要对代码进行微调，由于缺乏 shader 知识，且考虑到对实际效果的影响不大，所以略过这部分。
+（画面的处理不是必须的，可以自行酌情调整；初学完全可以先跳过这部分内容） -->
 
-（画面的处理不是必须的，可以自行酌情调整；初学完全可以先跳过这部分内容）
+其中，`uniform` 类似 `export` 导出变量，可以在右侧检查器中修改参数。这里设置 `vignette_intensity` 为 0.5，`vignette_opacity` 为 0.1.
 
 ### 02 角色控制器、动画、相机
 
 新建 Character3D 节点作为 Player，然后在节点下面设置图像，确保逻辑与画面分离。
 
+Godot 没有 Unity 的 InputManager 模块，这里直接使用 physics_process 监听输入。
